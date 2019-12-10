@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2017 at 08:25 PM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.21
+-- Generation Time: Dec 10, 2019 at 09:22 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,6 +21,37 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_exam`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `exam_score`
+--
+
+CREATE TABLE `exam_score` (
+  `id` int(11) NOT NULL,
+  `userid` int(11) NOT NULL,
+  `score` int(11) NOT NULL,
+  `date_taken` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `exam_score`
+--
+
+INSERT INTO `exam_score` (`id`, `userid`, `score`, `date_taken`) VALUES
+(1, 8, 5, '2019-12-07 16:20:11'),
+(2, 8, 7, '2019-12-07 16:20:11'),
+(3, 8, 8, '2019-12-07 16:20:11'),
+(4, 10, 2, '2019-12-07 16:20:11'),
+(5, 8, 4, '2019-12-07 16:20:11'),
+(6, 8, 1, '2019-12-07 16:20:11'),
+(7, 10, 6, '2019-12-07 16:20:11'),
+(8, 9, 9, '2019-12-07 16:27:50'),
+(9, 10, 2, '2019-12-07 17:43:15'),
+(10, 11, 3, '2019-12-08 17:14:32'),
+(11, 8, 5, '2019-12-08 21:29:07'),
+(12, 8, 9, '2019-12-08 21:34:53');
 
 -- --------------------------------------------------------
 
@@ -37,9 +70,8 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`adminId`, `adminUser`, `adminPass`) VALUES
-(1, 'admin', '202cb962ac59075b964b07152d234b70'),
-(2, '', ''),
-(3, 'Alamgir_JUST', '8226a3c238456069bbec8b760a8babaa');
+(1, 'admin', '332532dcfaa1cbf61e2a266bd723612c')
+
 
 -- --------------------------------------------------------
 
@@ -98,7 +130,11 @@ INSERT INTO `tbl_ans` (`id`, `quesNo`, `rightAns`, `ans`) VALUES
 (164, 10, 0, 'Basic path '),
 (165, 10, 0, 'Graph Testing '),
 (166, 10, 0, 'Dataflow'),
-(167, 10, 1, ' Glass box testing');
+(167, 10, 1, ' Glass box testing'),
+(168, 11, 1, 'Raw fact'),
+(169, 11, 0, 'Processed data'),
+(170, 11, 0, 'Information Processing'),
+(171, 11, 0, 'None of the above');
 
 -- --------------------------------------------------------
 
@@ -126,7 +162,8 @@ INSERT INTO `tbl_ques` (`id`, `quesNo`, `ques`) VALUES
 (46, 7, 'RAD Model was purposed by ? '),
 (47, 8, 'Software engineering aims at developing ? '),
 (48, 9, 'To completely write the program in FORTRAN and rewrite the 1% code in assembly language, if the project needs 13 days, the team consists of ? '),
-(49, 10, 'White box testing, a software testing  technique is sometimes called ? ');
+(49, 10, 'White box testing, a software testing  technique is sometimes called ? '),
+(50, 11, 'What is data?');
 
 -- --------------------------------------------------------
 
@@ -148,12 +185,20 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`userid`, `name`, `username`, `password`, `email`, `status`) VALUES
-(5, 'Md. Alamgir Hossain', 'alamgir_JUST', '8226a3c238456069bbec8b760a8babaa', 'alamgir.cse14.just@gmail.com', 0),
-(7, 'Alamgir Hossain', 'alamgir_csejust', '8226a3c238456069bbec8b760a8babaa', 'malamgirhossain1996@gmail.com', 0);
+(8, 'Paint', 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'samnapoleon86@gmail.com', 0),
+(9, 'Stephen Kwame', 'kwame', '827ccb0eea8a706c4c34a16891f84e7b', 'kwame@gmail.com', 0),
+(10, 'Ama Ghana', 'sammy', '827ccb0eea8a706c4c34a16891f84e7b', 'ama@gmail.com', 0),
+(11, 'Sam', 'sam', '332532dcfaa1cbf61e2a266bd723612c', 'sam@gmail.com', 1);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `exam_score`
+--
+ALTER TABLE `exam_score`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_admin`
@@ -184,25 +229,36 @@ ALTER TABLE `tbl_user`
 --
 
 --
+-- AUTO_INCREMENT for table `exam_score`
+--
+ALTER TABLE `exam_score`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
   MODIFY `adminId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `tbl_ans`
 --
 ALTER TABLE `tbl_ans`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
+
 --
 -- AUTO_INCREMENT for table `tbl_ques`
 --
 ALTER TABLE `tbl_ques`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
