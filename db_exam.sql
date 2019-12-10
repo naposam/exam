@@ -70,7 +70,7 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`adminId`, `adminUser`, `adminPass`) VALUES
-(1, 'admin', '332532dcfaa1cbf61e2a266bd723612c')
+(1, 'admin', '332532dcfaa1cbf61e2a266bd723612c');
 
 
 -- --------------------------------------------------------
