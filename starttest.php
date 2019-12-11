@@ -35,7 +35,7 @@ body{
 <h1 style="color:#7c0f14">Welcome to Online Exam - Start Now</h1>
 	<div class="starttest">
 	<h2 style="color:#fff">Test your knowledge</h2>
-	<p style="color:#fff">This is multiple system choice quize to test your knowledge</p>
+	<p style="color:#fff">This is multiple  choice Test</p>
 	<ul style="color:#fff">
 		<li><strong>Number of Questions : </strong> <?php echo $total; ?></li>
 		<li><strong>Question Type : </strong> Multiple Choice</li>

@@ -23,7 +23,7 @@
 		.box{
 			position: absolute;
 			top:  calc(62.5% - 150px);
-			left: calc(32.5% - 100px);
+			left: calc(35.5% - 100px);
 			transform: perspective(1000px) rotateY(-45deg);
 			width: 150px;
 			height: 250px;
@@ -102,7 +102,7 @@
 </div>
 	</div>
 <div class="main">
-<h1>Examination in Online - User Login</h1>
+<h1 style="color:#7c0f14;font-family: sans-serif; font-style: 'Roboto'">Examination in Online - User Login</h1>
 
 	<div class="segment" style="margin-right:30px; background-color: #F0F8FF">
 		
@@ -124,7 +124,7 @@
 			   <td><input type="submit" id="loginsubmit" value="LogIn">
 			   </td>
 			 </tr>
-       </table>
+       </table> 
 	   </form>
 	   <p style="color:#fff">New User ? <a href="register.php" style="color:#fff">Signup</a></p>
 		<span class="empty" style ="display:none;">Field Must Not be Empty !</span>

@@ -151,7 +151,7 @@ body > div.box:first-child:hover:after {
     <div class="box-inner">
       <span class="hover-me">INSTRUCTIONS</span>
       <span class="hi">Hi!</span>
-      <span class="message">Read The Instructions carefully </span>
+      <span class="message" >Read The Instructions carefully &#8609 </span>
     </div>
     <span class="l-right"></span>
     <span class="l-bottom"></span>
@@ -159,12 +159,12 @@ body > div.box:first-child:hover:after {
 <div class="box box-next">
    <ol>
    	<li>Register with your fullname, email, password and username</li>
-   	<li>An email cannot be registered more than one</li>
+   	<li>One email cannot be registered more than one</li>
    	<li>You have 60 seconds to answer one question</li>
    	<li>The system will skip to the next question after 60 seconds if not answer</li>
    	<li>The system save scores automatically</li>
    	<li>You can view score history any time you log into the system</li>
-   	<li>Exams can be taken only Once</li>
+   	
    </ol>
 </div>
 	</div>	

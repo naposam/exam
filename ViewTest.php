@@ -48,7 +48,7 @@ body{
 			<?php
 			
 				include('connect.php');
-$result = $db->prepare("SELECT * from exam_score where userid='$userid' ORDER BY date_taken DESC");
+$result = $db->prepare("SELECT *,sum(score) as marks from exam_score where userid='$userid' ORDER BY date_taken DESC");
 				$result->execute();
 				for($i=0; $row = $result->fetch(); $i++){
 				$id=$row['id'];
@@ -67,11 +67,21 @@ $result = $db->prepare("SELECT * from exam_score where userid='$userid' ORDER BY
 			<td><?php echo $row['id']; ?></td>
 			<td><?php echo $row['score']; ?></td>
 			<td><?php echo $date_taken; ?></td>
-			<td><?php echo $time_taken; ?></td>
+			<td><?php echo $time_taken; ?></td> 
+
 		        </tr>
+		        <th>
+       	<tr>
+       	<td style="color:#fff"><span style="font-size: 25px; font-weight: bold;">Total Marks <?php echo $row['marks']?></span></td>
+       
+       </tr>
+       </th>
 			<?php
 				}
-			?>                       
+			?>
+       
+     
+
 		</tbody>
 	</table>
 	

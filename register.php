@@ -25,7 +25,7 @@ body{
           .box{
       position: absolute;
       top:  calc(62.5% - 150px);
-      left: calc(32.5% - 100px);
+      left: calc(35.5% - 100px);
       transform: perspective(1000px) rotateY(-45deg);
       width: 150px;
       height: 250px;
