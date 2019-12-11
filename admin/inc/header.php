@@ -44,6 +44,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 			<li><a href="users.php" style="color:#fff">Manage User</a></li>
 			<li><a href="quesadd.php" style="color:#fff">Add Ques</a></li>
 			<li><a href="queslist.php" style="color:#fff">Ques List</a></li>
+			<li><a href="ViewStudentResult.php" style="color:#fff">View Student Scores</a></li>
 			<li><a href="?action=logout" style="color:#fff">Logout</a></li>
 		</ul>
 	 </div>
