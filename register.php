@@ -1,5 +1,6 @@
 <?php
 	include 'inc/header.php';
+  include 'connnection.php';
 ?>
 <style>
 .segment img{
@@ -114,10 +115,26 @@ body{
            <td>Name</td>
            <td><input type="text" name="name" id = "name"></td>
          </tr>
-		<tr>
-           <td>Username</td>
-           <td><input name="username" type="text" id="username"></td>
+		     <tr>
+           <td>Class</td>
+           <td>
+            <select name="username" id="username"  style="margin-bottom: 10px;width: 238px;padding: 5px;border: 1px solid #7c0f14 ;">
+                     <option selected="" disabled="">Select Class</option>
+                    <?php 
+
+                      $result = mysqli_query($conn,"select * from tbl_class ")or die(mysqli_error($conn));
+                      while($row = mysqli_fetch_array($result)){
+                      $reg_id = $row['id'];
+                      $name=$row['class_name'];   
+                  ?>
+                <option value="<?php echo $id;?>"> <?php echo $id;?><?php echo" ";?><?php echo $name;?> </option>
+                  <?php }?>
+                        
+                      </select>
+
+                    </td>
          </tr>
+          
          <tr>
            <td>Password</td>
            <td><input type="password" name="password" id = "password"></td>

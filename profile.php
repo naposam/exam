@@ -33,8 +33,8 @@
 			   <td><input name="name" type="text" value="<?php echo $result['name']; ?>"/></td>
 			 </tr>
 			   <tr>
-			   <td style="color: #fff">Username</td>
-			   <td><input name="username" type="text" value="<?php echo $result['username']; ?>"/></td>
+			   <td style="color: #fff">Class</td>
+			   <td><input name="username" type="text" value="<?php echo $result['class_name']; ?>"/></td>
 			 </tr>
 			 <tr>
 			   <td style="color: #fff">Email</td>

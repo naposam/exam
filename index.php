@@ -102,7 +102,7 @@
 </div>
 	</div>
 <div class="main">
-<h1 style="color:#7c0f14;font-family: sans-serif; font-style: 'Roboto'">Examination in Online - User Login</h1>
+<h1 style="color:#7c0f14;font-family: sans-serif; font-style: 'Roboto'">Online Examination - User Login</h1>
 
 	<div class="segment" style="margin-right:30px; background-color: #F0F8FF">
 		

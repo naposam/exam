@@ -82,7 +82,7 @@ class User{
 		}
 		}
 		public function getUserData($userid){
-			$query = "select * from tbl_user where userid = '$userid'";
+			$query = "SELECT *, tbl_class.class_name FROM tbl_user LEFT JOIN tbl_class ON tbl_user.username=tbl_class.id WHERE tbl_user.userid = '$userid'";
 			$result = $this->db->select($query);
 			return $result;
 		}

@@ -40,7 +40,7 @@ body{
 		<li><strong>Number of Questions : </strong> <?php echo $total; ?></li>
 		<li><strong>Question Type : </strong> Multiple Choice</li>
 	</ul>
-	<h3 style="color:#fff">You will get only 60 seconds for each question.</h3>
+	<h3 style="color:#fff">You have only 60 seconds for each question.</h3>
 	<a href="test.php?q=<?php echo $question['quesNo']; ?>" style="color:#7c0f14">Start Test</a>	
 	</div>
   </div>
