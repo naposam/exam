@@ -64,7 +64,7 @@
 			<tr>
 				<th>Number</th>
 				<th>Name</th>
-				<th>Username</th>
+				<th>Class</th>
 				<th>Email</th>
 				<th>Action</th>
 			</tr>
@@ -98,9 +98,9 @@
 				<td>
 				<?php 
 				if($result['status'] == '1'){
-					echo "<span class = 'error'>".$result['username']."</span>";
+					echo "<span class = 'error'>".$result['class_name']."</span>";
 				}else{
-					echo $result['username'];
+					echo $result['class_name'];
 				}
 				?>
 				</td>

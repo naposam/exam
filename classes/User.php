@@ -87,7 +87,7 @@ class User{
 			return $result;
 		}
 		public function getAlluser(){
-			$query = "select * from tbl_user order by userid desc";
+			$query = "SELECT * FROM tbl_user JOIN tbl_class ON tbl_user.username = tbl_class.id order by userid desc";
 			$result = $this->db->select($query);
 			return $result;
 		}

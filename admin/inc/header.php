@@ -25,6 +25,20 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 	<meta http-equiv="Expires" content="-1">
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<link rel="stylesheet" href="css/admin.css">
+	<style type="text/css">
+		@media print {
+  
+  div > div:not(.menu), 
+  div + div:not(.menu) {
+      display: show;
+  }
+  div >ul:not(.menu1){
+  	display: none
+  }
+}
+
+
+	</style>
 </head>
 <body>
 	
@@ -40,12 +54,12 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 		<section class="maincontent">
 		<div class="menu">
 		<ul>
-			<li><a href="index.php" style="color:#fff">Home</a></li>
-			<li><a href="users.php" style="color:#fff">Manage User</a></li>
-			<li><a href="quesadd.php" style="color:#fff">Add Ques</a></li>
-			<li><a href="queslist.php" style="color:#fff">Ques List</a></li>
-			<li><a href="ViewStudentResult.php" style="color:#fff">View Student Scores</a></li>
-			<li><a href="?action=logout" style="color:#fff">Logout</a></li>
+			<li class="menu1"><a href="index.php" style="color:#fff">Home</a></li>
+			<li class="menu1"><a href="users.php" style="color:#fff">Manage User</a></li>
+			<li class="menu1"><a href="quesadd.php" style="color:#fff">Add Ques</a></li>
+			<li class="menu1"><a href="queslist.php" style="color:#fff">Ques List</a></li>
+			<li class="menu"><a href="class_search.php" style="color:#fff">View Student Scores</a></li>
+			<li class="menu1"><a href="?action=logout" style="color:#fff">Logout</a></li>
 		</ul>
 	 </div>
 	

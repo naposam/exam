@@ -120,16 +120,15 @@ body{
            <td>
             <select name="username" id="username"  style="margin-bottom: 10px;width: 238px;padding: 5px;border: 1px solid #7c0f14 ;">
                      <option selected="" disabled="">Select Class</option>
-                    <?php 
 
+                     <?php 
                       $result = mysqli_query($conn,"select * from tbl_class ")or die(mysqli_error($conn));
                       while($row = mysqli_fetch_array($result)){
-                      $reg_id = $row['id'];
-                      $name=$row['class_name'];   
+                        $id=$row['Id'];
+                      $myclass = $row['class_name'];      
                   ?>
-                <option value="<?php echo $id;?>"> <?php echo $id;?><?php echo" ";?><?php echo $name;?> </option>
+                <option value="<?php echo $id;?>"><?php echo $myclass;?> </option>
                   <?php }?>
-                        
                       </select>
 
                     </td>
